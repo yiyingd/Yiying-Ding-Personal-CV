@@ -149,13 +149,17 @@
 	<div class="image-block" data-aos="fade-up">
 		<div class = "row">
 			<div class = "col" data-aos="fade-right">
-				<img src="image/nanawall-stakeholder-map.png" class="img-fluid" alt="Responsive image">
+				<a href="image/nanawall-stakeholder-map.png" data-toggle="lightbox" data-title="Stakeholder Map">
+					<img src="image/nanawall-stakeholder-map.png" class="img-fluid" alt="Responsive image">
+				</a>
 				<p><em>Stakeholder map</em></p>
 			</div>
 			<div class = "col" data-aos="fade-left">
 				<br>
 				<br>
-				<img src="image/nanawall-value-flow-map.png" class="img-fluid" alt="Responsive image">
+				<a href="image/nanawall-value-flow-map.png" data-toggle="lightbox" data-title="Value Flow">
+					<img src="image/nanawall-value-flow-map.png" class="img-fluid" alt="Responsive image">
+				</a>
 				<p><em>Value flow map</em></p>
 			</div>
 		</div>
@@ -194,7 +198,9 @@
 						<br>
 						<h2>Color</h2>
 						<br>
-						<img src="image/nanawall-color-choice.png"  class="img-fluid" alt="Responsive image" style="height: 40%;">
+						<a href="image/nanawall-color-choice.png" data-toggle="lightbox" data-title="Color Choice">
+							<img src="image/nanawall-color-choice.png"  class="img-fluid" alt="Responsive image" style="height: 40%;">
+						</a>
 					</div>
 				</div>
 			</div>
@@ -216,19 +222,25 @@
 		<br>
 		<div class = "row">
 				<div class = "col">
-					<img src="image/nanawall-progress.png"  class="img-fluid" alt="Responsive image" height="50%">
+					<a href="image/nanawall-progress.png" data-toggle="lightbox" data-title="Progress">
+						<img src="image/nanawall-progress.png"  class="img-fluid" alt="Responsive image" height="50%">
+					</a>
 					<h3>Progress &amp Haptic Feedback</h3>
 					<p>The progress bar provides feedback to the user about the measuring process. 
 					Haptic feedback (not shown) also informs the user if the wall edge was measured successfully similar to Apple’s “Measure” app.</p>
 				</div>
 				<div class = "col">
-					<img src="image/nanawall-color-focus.png"  class="img-fluid" alt="Responsive image" >
+					<a href="image/nanawall-color-focus.png" data-toggle="lightbox" data-title="Color Focus">
+						<img src="image/nanawall-color-focus.png"  class="img-fluid" alt="Responsive image" >
+					</a>
 					<h3>Color &amp Focus</h3>
 					<p>The AR view immediately changes the appearance of the wall based on customization options.
 					Here, selecting a color will change the color of the wall. The selected color is outlined by a concentric circle.</p>
 				</div>
 				<div class = "col">
-					<img src="image/nanawall-info-forward.png"  class="img-fluid" alt="Responsive image">
+					<a href="image/nanawall-info-forward.png" data-toggle="lightbox" data-title="Infromation Forward">
+						<img src="image/nanawall-info-forward.png"  class="img-fluid" alt="Responsive image">
+					</a>
 					<h3>Information Forwarding</h3>
 					<p>Measurements and recommended defaults are pre-populated based on data previously provided through the AR measuring and location permission.</p>
 				</div>
@@ -276,14 +288,26 @@
 
 
 
-
+	<!--loading jquery and bootstrap -->
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<!--loading scrolling library -->
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<!--loading lightbox library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map"></script>
+	<!--Initiate scrolling library -->
 	 <script>
 	    AOS.init();
+
+	    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
 	 </script>
 </body>
